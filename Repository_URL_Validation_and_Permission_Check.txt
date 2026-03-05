@@ -1,0 +1,2 @@
+Validated repository URL: https://github.com/Prithvika16/Scalable-Java-Application-Deployment-on-Kubernetes
+User permissions confirmed for access.
