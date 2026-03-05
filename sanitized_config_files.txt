@@ -1,0 +1,75 @@
+Sanitized repository structure:
+
+src/main/resources/application.yml:
+---
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/app_db
+    username: app_user
+    password: app_password
+# AWS configuration block removed
+
+src/main/resources/application.properties:
+spring.datasource.url=jdbc:mysql://localhost:3306/app_db
+spring.datasource.username=app_user
+spring.datasource.password=app_password
+# AWS configuration block removed
+
+k8s/eks-deployment.yaml:
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: springboot-app
+  template:
+    metadata:
+      labels:
+        app: springboot-app
+    spec:
+      containers:
+      - name: springboot-app
+        image: prithvika16/springboot-app:latest
+        ports:
+        - containerPort: 8080
+# AWS EKS cluster and service account blocks removed
+
+k8s/service.yaml:
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springboot-app-service
+spec:
+  selector:
+    app: springboot-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+# No AWS-specific content
+
+cloudformation/aws-stack.yaml:
+# Entire file removed (was AWS-specific)
+
+terraform/main.tf:
+# Entire file removed (was AWS-specific)
+
+terraform/variables.tf:
+# Entire file removed (was AWS-specific)
+
+README.md:
+# No AWS-specific content
+
+Summary Report:
+- src/main/resources/application.yml: AWS configuration block removed
+- src/main/resources/application.properties: AWS configuration block removed
+- k8s/eks-deployment.yaml: EKS cluster and service account blocks removed
+- cloudformation/aws-stack.yaml: file deleted
+- terraform/main.tf: file deleted
+- terraform/variables.tf: file deleted
+A sanitized copy of the repository with all AWS-related code blocks and files removed, a summary report of modifications, and an internal audit log (not included in output).
