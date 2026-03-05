@@ -1,0 +1,1 @@
+Validating access to https://github.com/Prithvika16/Scalable-Java-Application-Deployment-on-Kubernetes and confirming user permissions.
