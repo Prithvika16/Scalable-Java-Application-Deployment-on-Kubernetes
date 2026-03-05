@@ -1,0 +1,8 @@
+- application.yml: AWS section removed
+- k8s/eks-deployment.yaml: AWS cluster and service account blocks removed
+- cloudformation/aws-stack.yaml: file removed (entirely AWS-related)
+
+Summary Report:
+- application.yml: AWS configuration block removed
+- k8s/eks-deployment.yaml: EKS cluster and service account blocks removed
+- cloudformation/aws-stack.yaml: file deleted
