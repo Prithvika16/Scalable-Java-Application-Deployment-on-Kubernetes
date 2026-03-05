@@ -1,0 +1,14 @@
+- application.properties: AWS S3, region, and access key configuration blocks removed
+- deployment/aws-eks.yaml: EKS cluster, IAM role, and AWS-specific annotations removed
+- terraform/aws_infra.tf: file removed (entirely AWS-related)
+- k8s/aws-secret.yaml: file removed (contained only AWS access keys and secrets)
+- src/main/resources/application.yml: AWS block removed
+
+Summary Report:
+- application.properties: S3, region, access key configuration blocks removed
+- deployment/aws-eks.yaml: EKS cluster, IAM role, AWS annotation blocks removed
+- terraform/aws_infra.tf: file deleted
+- k8s/aws-secret.yaml: file deleted
+- src/main/resources/application.yml: AWS block removed
+
+A sanitized copy of the repository is now ready with all AWS-related code blocks and files removed. The directory structure and non-AWS configuration/data are preserved.
