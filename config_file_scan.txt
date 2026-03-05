@@ -1,0 +1,12 @@
+Scanned repository: https://github.com/Prithvika16/Scalable-Java-Application-Deployment-on-Kubernetes
+Identified configuration files:
+- src/main/resources/application.yml
+- src/main/resources/application.properties
+- k8s/eks-deployment.yaml
+- k8s/service.yaml
+- cloudformation/aws-stack.yaml
+- terraform/main.tf
+- terraform/variables.tf
+- README.md
+
+Ready to parse files for AWS-related code blocks.
