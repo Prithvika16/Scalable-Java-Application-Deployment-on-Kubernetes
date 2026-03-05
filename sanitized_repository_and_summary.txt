@@ -1,0 +1,60 @@
+Sanitized Repository Structure:
+
+1. application.properties (sanitized):
+
+# Original AWS-related properties removed
+# (e.g., aws.accessKeyId, aws.secretAccessKey, aws.region, aws.s3.bucket, etc.)
+
+# Other non-AWS properties remain
+server.port=8080
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+
+2. k8s/deployment.yaml (sanitized):
+
+# AWS-specific EKS cluster and IAM serviceAccount blocks removed
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: springboot-app
+  template:
+    metadata:
+      labels:
+        app: springboot-app
+    spec:
+      containers:
+      - name: springboot-app
+        image: prithvika16/springboot-app:latest
+        ports:
+        - containerPort: 8080
+
+3. k8s/service.yaml (unchanged):
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: springboot-app-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: springboot-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+4. terraform/aws-eks.tf (file removed - entirely AWS-related)
+5. cloudformation/aws-stack.yaml (file removed - entirely AWS-related)
+
+Summary Report:
+- application.properties: AWS configuration properties removed (access keys, secret keys, region, S3 bucket)
+- k8s/deployment.yaml: EKS cluster and IAM serviceAccount blocks removed
+- terraform/aws-eks.tf: file deleted (entirely AWS-related)
+- cloudformation/aws-stack.yaml: file deleted (entirely AWS-related)
