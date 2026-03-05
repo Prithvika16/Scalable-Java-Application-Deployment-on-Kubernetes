@@ -1,0 +1,1 @@
+Repository cloned. Identified configuration files: application.yml, application.properties, k8s/eks-deployment.yaml, cloudformation/aws-stack.yaml, terraform/main.tf. Scanning for AWS-related code blocks in these files.
