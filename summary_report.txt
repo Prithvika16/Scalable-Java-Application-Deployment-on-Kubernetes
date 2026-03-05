@@ -1,0 +1,7 @@
+Summary Report:
+- application.yml: AWS configuration block removed
+- application.properties: AWS-related properties removed
+- k8s/eks-deployment.yaml: EKS cluster and service account blocks removed
+- cloudformation/aws-stack.yaml: file deleted (entirely AWS-related)
+- terraform/main.tf: file deleted (entirely AWS-related)
+A sanitized copy of the repository with all AWS-related code blocks and files removed, plus a summary report of modifications.
