@@ -1,0 +1,29 @@
+Sanitized Repository Structure:
+
+application.yml:
+# AWS section removed
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/mydb
+    username: user
+    password: pass
+
+application.properties:
+# AWS configuration removed
+server.port=8080
+spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+spring.datasource.username=user
+spring.datasource.password=pass
+
+k8s/eks-deployment.yaml: DELETED (entirely AWS-related)
+cloudformation/aws-stack.yaml: DELETED (entirely AWS-related)
+terraform/aws.tf: DELETED (entirely AWS-related)
+
+Summary Report:
+- application.yml: AWS configuration block removed
+- application.properties: AWS configuration block removed
+- k8s/eks-deployment.yaml: file deleted
+- cloudformation/aws-stack.yaml: file deleted
+- terraform/aws.tf: file deleted
+
+A sanitized copy of the repository with all AWS-related code blocks and files removed, a summary report of modifications, and an internal audit log (not included in output).
