@@ -1,1 +1,1 @@
-Markdown content generated from the input PDF file.
+Markdown content and conversion report will be generated here.
